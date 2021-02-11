@@ -1,26 +1,31 @@
-name: DeployOnGHPages
+name: DeployToGitHubPages
+env:
+  PUBLISH_DIR: bin/Release/netstandard2.1/publish/wwwroot
+  # Include subfolders if needed
 
-on: 
+on:
   push:
-    branches: 
-      - master
+    branches: [ master ]
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
-
     steps:
     - uses: actions/checkout@v2
-    - name: Setup .NET Core SDK
-      uses: actions/setup-dotnet@v1.7.2
 
-    - name: Publish with dotnet
-      run: dotnet publish --configuration Release --output build
-      
-    - name: Deploy to Github Pages
-      uses: JamesIves/github-pages-deploy-action@4.0.0
+    - name: Publish app
+      run: dotnet publish -c Release
+      # You can use cd before if your project is in a subfolder
+
+    - name: Rewrite base href
+      uses: SteveSandersonMS/ghaction-rewrite-base-href@v1
       with:
-        branch: gh-pages # The branch the action should deploy to.
-        folder: build/wwwroot # The folder the action should deploy.
-        single-commit: true
+        html_path: ${{ env.PUBLISH_DIR }}/index.html
+        base_href: /frifugio.github.io/
+
+    - name: GitHub Pages
+      if: success()
+      uses: crazy-max/ghaction-github-pages@v2.2.0
+      with:
+        target_branch: gh-pages
+        build_dir: ${{ env.PUBLISH_DIR }}
