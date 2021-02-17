@@ -10,7 +10,7 @@
 }
 
 .sidebar[b-1123vvbe72] {
-    background-image: linear-gradient(180deg, rgb(5, 39, 103) 0%, #3a0647 70%);
+    background-color: #7014E8;
 }
 
 .top-row[b-1123vvbe72] {
@@ -122,13 +122,25 @@
     color: white;
 }
 
+#profile-photo[b-aawmdj9mq7] {
+    display: none;
+}
+
 @media (min-width: 641px) {
     .navbar-toggler[b-aawmdj9mq7] {
         display: none;
     }
 
+    .navbar-brand[b-aawmdj9mq7] {
+        display: none;
+    }
+
     .collapse[b-aawmdj9mq7] {
         /* Never collapse the sidebar for wide screens */
+        display: block;
+    }
+
+    #profile-photo[b-aawmdj9mq7] {
         display: block;
     }
 }
