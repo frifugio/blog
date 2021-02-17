@@ -1,7 +1,21 @@
 ﻿@page "/"
+@using Services
+@inject IPostService PostService
 
-<h1>Hello, world!</h1>
+<div class="container card-columns">
+    @foreach (var post in PostList)
+    {
+        <PostCard Path="@post" />
+    }
+</div>
 
-Welcome to your new app.
+@code {
 
-<SurveyPrompt Title="How is Blazor working for you?" />
+    public List<string> PostList { get; set; } = new List<string>();
+
+    protected override async Task OnInitializedAsync()
+    {
+        var postList = await PostService.GetAllPostsPathAsync();
+        PostList = new List<string>(postList);
+    }
+}

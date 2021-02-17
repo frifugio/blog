@@ -50,13 +50,25 @@
     color: white;
 }
 
+#profile-photo {
+    display: none;
+}
+
 @media (min-width: 641px) {
     .navbar-toggler {
         display: none;
     }
 
+    .navbar-brand {
+        display: none;
+    }
+
     .collapse {
         /* Never collapse the sidebar for wide screens */
+        display: block;
+    }
+
+    #profile-photo {
         display: block;
     }
 }
