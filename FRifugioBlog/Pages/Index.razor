@@ -5,7 +5,7 @@
 <div class="container card-columns">
     @foreach (var post in PostList)
     {
-        <PostCard Path="@post" />
+        <PostCard Filename="@post" />
     }
 </div>
 
@@ -15,7 +15,7 @@
 
     protected override async Task OnInitializedAsync()
     {
-        var postList = await PostService.GetAllPostsPathAsync();
+        var postList = await PostService.GetAllPostNamesAsync();
         PostList = new List<string>(postList);
     }
 }

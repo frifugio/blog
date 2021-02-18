@@ -27,34 +27,44 @@ namespace FRifugioBlog.Services
             _client = client;
         }
 
-        public async Task<IEnumerable<string>> GetAllPostsPathAsync()
+        public async Task<IEnumerable<string>> GetAllPostNamesAsync()
         {
             var response = await _client.GetFromJsonAsync<JsonElement>("assets/posts/post-list.json");
             var postList = new List<string>();
             foreach (var post in response.GetProperty("post").EnumerateArray())
             {
-                postList.Add(_basePostPath + post.GetString());
+                postList.Add(post.GetString());
             }
 
             return postList;
         }
 
-        public Task<Post> GetPostBodyFromPathAsync(string path)
+        public async Task<Post> GetPostAsync(string filename)
         {
-            throw new NotImplementedException();
-        }
-
-        public async Task<Post> GetPostMetadataFromPathAsync(string path)
-        {
-
             // Retrieve and convert to string the file from the specified path
-            var s = await _client.GetStringAsync(path);
+            var fileString = await _client.GetStringAsync(_basePostPath + filename);
+
+            var post = await GetPostMetadataAsync(filename);
 
             var pipeline = new MarkdownPipelineBuilder()
                 .UseYamlFrontMatter()
                 .Build();
 
-            var document = Markdown.Parse(s, pipeline);
+            post.Body = Markdown.ToHtml(fileString, pipeline);
+
+            return post;
+        }
+
+        public async Task<Post> GetPostMetadataAsync(string filename)
+        {
+            // Retrieve and convert to string the file from the specified path
+            var fileString = await _client.GetStringAsync(_basePostPath + filename);
+
+            var pipeline = new MarkdownPipelineBuilder()
+                .UseYamlFrontMatter()
+                .Build();
+
+            var document = Markdown.Parse(fileString, pipeline);
 
             var yamlLines = document.Descendants<YamlFrontMatterBlock>().FirstOrDefault()
                 .Lines.ToString();

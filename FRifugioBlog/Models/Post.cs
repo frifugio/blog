@@ -24,6 +24,9 @@ namespace FRifugioBlog.Models
         [YamlMember(Alias = "categories", ApplyNamingConventions = false)]
         public List<string> Categories { get; set; }
 
+        /// <summary>
+        /// This property will contain the content of the post, already in HTML
+        /// </summary>
         public string Body { get; set; }
 
         public Post()

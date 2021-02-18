@@ -1,0 +1,21 @@
+﻿@page "/post/{filename}"
+@using Models
+@using Services
+@using Markdig
+@inject IPostService PostService
+
+@HtmlContent
+
+@code {
+    [Parameter]
+    public string Filename { get; set; }
+
+    public Post Post { get; set; } = new Post();
+    public MarkupString HtmlContent { get; set; }
+
+    protected override async Task OnParametersSetAsync()
+    {
+        Post = await PostService.GetPostAsync(Filename);
+        HtmlContent = new MarkupString(Post.Body);
+    }
+}

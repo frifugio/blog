@@ -7,16 +7,16 @@ namespace FRifugioBlog.Services
     public interface IPostService
     {
         /// <summary>
-        /// Returns a list of all the posts filepath, in descending order by name
+        /// Returns a list of all the posts names
         /// </summary>
-        /// <returns></returns>
-        Task<IEnumerable<string>> GetAllPostsPathAsync();
-        Task<Post> GetPostBodyFromPathAsync(string path);
+        Task<IEnumerable<string>> GetAllPostNamesAsync();
+        
+        Task<Post> GetPostAsync(string filename);
 
         /// <summary>
         /// Returns a post object with all valued properties, except for the Body
         /// </summary>
-        /// <param name="path">Path of the post</param>
-        Task<Post> GetPostMetadataFromPathAsync(string path);
+        /// <param name="path">Filename of the post (with extension)</param>
+        Task<Post> GetPostMetadataAsync(string filename);
     }
 }
