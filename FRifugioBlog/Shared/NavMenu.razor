@@ -1,33 +1,42 @@
-﻿<div class="top-row pl-4 navbar navbar-dark">
-    <a class="navbar-brand" href="">Francesco Rifugio - Blog</a>
-    <button class="navbar-toggler" @onclick="ToggleNavMenu">
+﻿<nav class="navbar navbar-expand-md navbar-custom">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".all-collapse">
         <span class="navbar-toggler-icon"></span>
     </button>
-</div>
 
-<div class="@NavMenuCssClass" @onclick="ToggleNavMenu">
-    <img class="rounded-circle mx-auto my-5" id="profile-photo" src="assets/profile.jpg" width="200"/>
-    <ul class="nav flex-column">
-        <li class="nav-item px-3">
-            <NavLink class="nav-link" href="" Match="NavLinkMatch.All">
-                <span class="oi oi-home" aria-hidden="true"></span> Home
-            </NavLink>
-        </li>
-        <li class="nav-item px-3">
-            <NavLink class="nav-link" href="about">
-                <span class="oi oi-person" aria-hidden="true"></span> About
-            </NavLink>
-        </li>
-    </ul>
-</div>
+    <!-- Social Links -->
+    <div class="navbar-collapse collapse w-100 order-1 order-md-0 all-collapse">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                <a class="nav-link nav-link-icon mx-1" href="https://twitter.com/Dragonriffi92" target="_blank"><i class="bi bi-twitter"></i></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link nav-link-icon mx-1" href="https://www.linkedin.com/in/francesco-rifugio/" target="_blank"><i class="bi bi-linkedin"></i></a>
+            </li>
+        </ul>
+    </div>
 
-@code {
-    private bool collapseNavMenu = true;
+    <!-- Main navigation -->
+    <div class="navbar-collapse collapse w-100 mx-auto order-0 all-collapse">
+        <ul class="navbar-nav align-items-center">
+            <li class="nav-item nav-item-text nav-item-text-blog">
+                <NavLink class="nav-link" href="" Match="NavLinkMatch.All">Blog</NavLink>
+            </li>
+            <li>
+                <object class="main-logo" type="image/svg+xml" data="assets/FRLogo.svg" />
+            </li>
+            <li class="nav-item nav-item-text">
+                <NavLink class="nav-link" href="about">About</NavLink>
+            </li>
+        </ul>
+    </div>
 
-    private string NavMenuCssClass => collapseNavMenu ? "collapse" : null;
+    <!-- Theme change / Search / Other -->
+    <div class="navbar-collapse collapse w-100 order-3 all-collapse">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="nav-link nav-link-icon mx-2" href="https://github.com/frifugio/" target="_blank"><i class="bi bi-github"></i></a>
+            </li>
+        </ul>
+    </div>
+</nav>
 
-    private void ToggleNavMenu()
-    {
-        collapseNavMenu = !collapseNavMenu;
-    }
-}

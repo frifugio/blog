@@ -10,12 +10,22 @@
     <div class="card-body">
         <h5 class="card-title">@Post.Title</h5>
         <p class="card-text">@Post.Summary</p>
-        @* TODO: Aggiungere sezione categorie *@
     </div>
+
+    @if (Post.Categories.Any())
+    {
+        <div class="card-body">
+            @foreach (var cat in Post.Categories)
+            {
+                <span class="badge badge-info mr-1">@cat</span>
+            }
+        </div>
+    }
+
     <div class="card-footer">
         <small class="text-muted">@Post.PublishDate.ToShortDateString()</small>
     </div>
-    <a class="stretched-link" href="post/@Filename"/>
+    <a class="stretched-link" href="post/@Filename" />
 </div>
 
 @code {

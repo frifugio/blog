@@ -1,74 +1,62 @@
-.navbar-toggler {
-    background-color: rgba(255, 255, 255, 0.1);
+.navbar-custom {
+    background-color: #007ACC;
+    font-family: 'Russo One', cursive;
+    color: #D5D5D5;
 }
 
-.top-row {
-    height: 3.5rem;
-    background-color: rgba(0,0,0,0.4);
-}
-
-.navbar-brand {
-    font-size: 1.1rem;
-}
-
-.oi {
-    width: 2rem;
-    font-size: 1.1rem;
-    vertical-align: text-top;
-    top: -2px;
-}
-
-.nav-item {
-    font-size: 0.9rem;
-    padding-bottom: 0.5rem;
-}
-
-    .nav-item:first-of-type {
-        padding-top: 1rem;
+    .navbar-custom a {
+        color: #D5D5D5;
     }
 
-    .nav-item:last-of-type {
-        padding-bottom: 1rem;
+    .navbar-custom .nav-item {
+        font-size: 50px;
     }
 
-    .nav-item ::deep a {
-        color: #d7d7d7;
-        border-radius: 4px;
-        height: 3rem;
-        display: flex;
-        align-items: center;
-        line-height: 3rem;
-    }
+        .navbar-custom .nav-item-text ::deep a {
+            color: #D5D5D5;
+            position: relative;
+        }
 
-.nav-item ::deep a.active {
-    background-color: rgba(255,255,255,0.25);
-    color: white;
+        .navbar-custom .nav-item-text ::deep a::before {
+            content: "";
+            position: absolute;
+            width: 92%;
+            height: 5px;
+            bottom: 18px;
+            margin-left: 8px;
+            left: 0;
+            background-color: #D5D5D5;
+            visibility: hidden;
+            transform: scaleX(0);
+            transition: all 0.3s ease-in-out 0s;
+        }
+
+        .navbar-custom .nav-item-text-blog ::deep a::before {
+            width: 65%;
+        }
+
+        .navbar-custom .nav-item-text ::deep a:hover::before {
+            visibility: visible;
+            transform: scaleX(1);
+        }
+
+        .navbar-custom  .nav-item-text ::deep a.active::before {
+            visibility: visible;
+            transform: scaleX(1);
+        }
+
+.nav-link-icon {
+    font-size: 30px;
 }
 
-.nav-item ::deep a:hover {
-    background-color: rgba(255,255,255,0.1);
-    color: white;
+    .nav-link-icon :hover {
+        color: #C8C8C8;
+    }
+
+.main-logo {
+    height: 80px;
+    filter: invert(99%) sepia(0%) saturate(1%) hue-rotate(171deg) brightness(91%) contrast(84%);
+    margin: 0 43px 0 55px;
 }
 
-#profile-photo {
-    display: none;
-}
 
-@media (min-width: 641px) {
-    .navbar-toggler {
-        display: none;
-    }
-
-    .navbar-brand {
-        display: none;
-    }
-
-    .collapse {
-        /* Never collapse the sidebar for wide screens */
-        display: block;
-    }
-
-    #profile-photo {
-        display: block;
-    }
-}

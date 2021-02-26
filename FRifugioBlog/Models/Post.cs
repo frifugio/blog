@@ -25,7 +25,7 @@ namespace FRifugioBlog.Models
         public List<string> Categories { get; set; }
 
         /// <summary>
-        /// This property will contain the content of the post, already in HTML
+        /// It contains the content of the post, already in HTML
         /// </summary>
         public string Body { get; set; }
 

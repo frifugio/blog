@@ -4,6 +4,7 @@ author: Francesco Rifugio
 headImagePath: assets/loadingLogo.png
 summary: Lorem ipsum dolor sit amet
 publishDate: 2021-02-17
+categories: [misc, code]
 ---
 
 # Lorem Ipsum
