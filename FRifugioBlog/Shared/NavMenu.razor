@@ -1,4 +1,4 @@
-﻿<nav class="navbar navbar-expand-md navbar-custom">
+﻿<nav class="navbar navbar-expand-md navbar-custom" id="full-navbar">
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".all-collapse">
         <span class="navbar-toggler-icon"></span>
     </button>
@@ -40,3 +40,31 @@
     </div>
 </nav>
 
+<nav class="navbar navbar-custom" id="collapsed-navbar">
+    <span class="navbar-brand"><object class="main-logo" type="image/svg+xml" data="assets/FRLogo.svg" /></span>
+    <button class="navbar-toggler ml-auto float-right" type="button" data-toggle="collapse" data-target=".all-collapse">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Main navigation -->
+    <div class="navbar-collapse collapse all-collapse">
+        <ul class="navbar-nav align-items-left">
+            <li class="nav-item nav-item-text nav-item-text-blog">
+                <NavLink class="nav-link" href="" Match="NavLinkMatch.All">Blog</NavLink>
+            </li>
+            <li class="nav-item nav-item-text">
+                <NavLink class="nav-link" href="about">About</NavLink>
+            </li>
+        </ul>
+    </div>
+
+    <!-- Social Links -->
+    <div class="navbar-collapse collapse all-collapse">
+        <div class="container d-flex justify-content-center w-75 mt-4">
+            <a class="nav-link-icon mx-auto" href="https://twitter.com/Dragonriffi92" target="_blank"><i class="bi bi-twitter"></i></a>
+            <a class="nav-link-icon mx-auto" href="https://www.linkedin.com/in/francesco-rifugio/" target="_blank"><i class="bi bi-linkedin"></i></a>
+            <a class="nav-link-icon mx-auto" href="https://github.com/frifugio/" target="_blank"><i class="bi bi-github"></i></a>
+        </div>
+    </div>
+
+</nav>

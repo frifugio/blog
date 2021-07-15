@@ -40,7 +40,7 @@
             transform: scaleX(1);
         }
 
-        .navbar-custom  .nav-item-text ::deep a.active::before {
+        .navbar-custom .nav-item-text ::deep a.active::before {
             visibility: visible;
             transform: scaleX(1);
         }
@@ -59,4 +59,53 @@
     margin: 0 43px 0 55px;
 }
 
+#collapsed-navbar {
+    display: none;
+}
+
+@media only screen and (max-width: 768px) {
+    #collapsed-navbar {
+        display: block;
+    }
+
+    #full-navbar {
+        display:none;
+    }
+
+    .navbar-toggler {
+        margin-top: 5px;
+        border-color: #D5D5D5;
+    }
+
+        .navbar-toggler .navbar-toggler-icon {
+            background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(213, 213, 213, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+        }
+
+
+    .main-logo {
+        height: 40px;
+        display: inline-block;
+        vertical-align: middle;
+        margin: auto;
+    }
+
+    .navbar-custom .nav-item {
+        font-size: 30px;
+    }
+
+    .navbar-custom .nav-item-text ::deep a::before {
+        width: 90px;
+        height: 4px;
+        bottom: 12px;
+        margin-left: 0px;
+    }
+
+    .navbar-custom .nav-item-text-blog ::deep a::before {
+        width: 50px;
+    }
+
+    .nav-link-icon {
+        font-size: 20px;
+    }
+}
 
