@@ -14,6 +14,7 @@ using YamlDotNet.Core.Events;
 using Markdig;
 using Markdig.Syntax;
 using Markdig.Extensions.Yaml;
+using System.Text;
 
 namespace FRifugioBlog.Services
 {
@@ -58,7 +59,8 @@ namespace FRifugioBlog.Services
         public async Task<Post> GetPostMetadataAsync(string filename)
         {
             // Retrieve and convert to string the file from the specified path
-            var fileString = await _client.GetStringAsync(_basePostPath + filename);
+            var byteArray = await _client.GetByteArrayAsync(_basePostPath + filename);
+            var fileString = Encoding.Latin1.GetString(byteArray, 0, byteArray.Length);
 
             var pipeline = new MarkdownPipelineBuilder()
                 .UseYamlFrontMatter()

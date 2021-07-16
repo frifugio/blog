@@ -1,17 +1,11 @@
-:root {
-    --background-color: #007ACC;
-    --accent-color: #D5D5D5;
-    --accent-color-highlight: #C8C8C8;
-}
-
 .navbar-custom {
-    background-color: var(--background-color);
+    background-color: var(--navbar-background-color);
     font-family: 'Russo One', cursive;
-    color: var(--accent-color);
+    color: var(--navbar-accent-color);
 }
 
     .navbar-custom a {
-        color: var(--accent-color);
+        color: var(--navbar-accent-color);
     }
 
     .navbar-custom .nav-item {
@@ -19,7 +13,7 @@
     }
 
         .navbar-custom .nav-item-text ::deep a {
-            color: var(--accent-color);
+            color: var(--navbar-accent-color);
             position: relative;
         }
 
@@ -31,7 +25,7 @@
             bottom: 18px;
             margin-left: 8px;
             left: 0;
-            background-color: var(--accent-color);
+            background-color: var(--navbar-accent-color);
             visibility: hidden;
             transform: scaleX(0);
             transition: all 0.3s ease-in-out 0s;
@@ -56,7 +50,7 @@
 }
 
     .nav-link-icon :hover {
-        color: var(--accent-color-highlight);
+        color: var(--navbar-accent-color-highlight);
     }
 
 .main-logo {
@@ -80,7 +74,7 @@
 
     .navbar-toggler {
         margin-top: 5px;
-        border-color: var(--accent-color);
+        border-color: var(--navbar-accent-color);
     }
 
         .navbar-toggler .navbar-toggler-icon {

@@ -1,1 +1,72 @@
 ﻿@page "/about"
+
+<style>
+    h1, h2 {
+        font-family: 'Russo One', cursive
+    }
+
+    hr {
+        background-color: var(--navbar-background-color);
+        height: 0.2rem;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .contact-icon {
+        font-size: 7vw;
+    }
+</style>
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-3">
+            <img class="img-fluid rounded mb-3" src="assets/profile.jpg" />
+        </div>
+        <div class="col-sm-9">
+            <h1>Francesco Rifugio</h1>
+            <p>
+                Sviluppatore auto-didatta, nato con Windows Phone, in cui ci ha lasciato un pezzo di cuore. Passato poi ad uno sviluppo desktop e web, sempre legato a tutto ciò che è tecnologia Microsoft.
+                <br /><br />
+                Amante della tecnologia in generale, sempre alla ricerca dell'ultimo ritrovato tecnologico, e con una dipendenza all'adrenalina che solo il parlare in pubblico restituisce.
+                <br /><br />
+                Se non è davanti al PC, potete trovarlo dietro i fornelli in cucina... o davanti a qualche console!
+            </p>
+        </div>
+    </div>
+    <hr />
+    <div class="row">
+        <div class="col-sm">
+            <h2>Certificazioni</h2>
+        </div>
+    </div>
+    <div class="row justify-content-center mt-3">
+        <div class="col-4 mx-auto">
+            <figure class="figure">
+                <a href="https://www.credly.com/badges/dd93a511-40b2-4662-a5c7-57614108d8d8/public_url" target="_blank">
+                    <img src="assets/about/microsoft-certified-azure-ai-fundamentals.png" class="figure-img img-fluid" alt="Microsoft Certified: Azure AI Fundamentals - Badge">
+                </a>
+                <figcaption class="figure-caption text-center">Microsoft Certified: Azure AI Fundamentals</figcaption>
+            </figure>
+        </div>
+        <div class="col-4 mx-auto">
+            <figure class="figure">
+                <a href="https://www.credly.com/badges/1a7c94ad-e69c-4fd8-abaa-a01a0f3c4fef/public_url" target="_blank">
+                    <img src="assets/about/microsoft-certified-azure-developer-associate.1.png" class="figure-img img-fluid" alt="Microsoft Certified: Azure Developer Associate - Badge">
+                </a>
+                <figcaption class="figure-caption text-center">Microsoft Certified: Azure Developer Associate</figcaption>
+            </figure>
+        </div>
+    </div>
+    <hr />
+    <div class="row">
+        <div class="col-sm">
+            <h2>Contatti</h2>
+        </div>
+    </div>
+    <div class="row">
+        <a class="mx-auto contact-icon" href="mailto://f.rifugio@outlook.com" target="_blank"><i class="bi bi-envelope-fill"></i></a>
+        <a class="mx-auto contact-icon" href="https://twitter.com/Dragonriffi92" target="_blank"><i class="bi bi-twitter"></i></a>
+        <a class="mx-auto contact-icon" href="https://www.linkedin.com/in/francesco-rifugio/" target="_blank"><i class="bi bi-linkedin"></i></a>
+        <a class="mx-auto contact-icon" href="https://github.com/frifugio/" target="_blank"><i class="bi bi-github"></i></a>
+    </div>
+</div>

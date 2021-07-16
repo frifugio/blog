@@ -1,5 +1,11 @@
 ﻿@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css");
 
+:root {
+    --navbar-background-color: #007ACC;
+    --navbar-accent-color: #D5D5D5;
+    --navbar-accent-color-highlight: #C8C8C8;
+}
+
 #loading-container {
     display: flex;
     justify-content: center;
