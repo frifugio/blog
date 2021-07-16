@@ -6,10 +6,22 @@
 <style>
     #post-content {
         background-color: white;
+        margin-top: 2rem;
+        padding: 1rem;
+    }
+
+    #head-image {
+        object-fit: cover;
+        height: 15rem;
+        padding: 0;
     }
 </style>
 
-<div class="container" id="post-content">
+<div class="container">
+    <img src="@Post.HeadImagePath" class="img-fluid rounded mx-auto d-block col-md-12" id="head-image" alt="@(Post.Title)-image" />
+</div>
+
+<div class="container rounded" id="post-content">
     @HtmlContent
 </div>
 
