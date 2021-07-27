@@ -14,6 +14,31 @@
         margin-bottom: 2rem;
     }
 
+    #post-content h2 {
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+    }
+
+    #post-content img {
+        max-width: 100%;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #post-content blockquote {
+        background: #f9f9f9;
+        border-left: 10px solid;
+        border-left-color: var(--navbar-background-color);
+        margin:	1.5em 10px;
+        padding: .5em 10px;
+        quotes:	"\201C""\201D""\2018""\2019";
+    }
+
+    #post-content blockquote p {
+        display: inline;
+    }
+
     #head-image {
         object-fit: cover;
         height: 15rem;
@@ -28,9 +53,9 @@
 <div class="container rounded" id="post-content">
     @HtmlContent
 
-    <blockquote class="blockquote text-right mt-5">
+    <div class="blockquote text-right mt-5">
         <footer class="blockquote-footer">@Post.Author, <cite title="Source Title">@Post.PublishDate.ToShortDateString()</cite></footer>
-    </blockquote>
+    </div>
 </div>
 
 @code {
