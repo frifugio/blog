@@ -56,7 +56,7 @@ L'unica cosa da considerare è che la parte finale dell'URL della vostra SPA sar
 
 ![github-repo](assets/posts/images/sviluppo-blog-github-repo.png)
 
-Fatto ciò si può tornare su Visual Studio, per collegare il codice locale al repository online; è tutto molto semplice, basta sfruttare l'interfaccia grafica che ci offre proprio il nostro IDE.
+Fatto ciò si può tornare su Visual Studio per collegare il codice locale al repository online; è tutto molto semplice, basta sfruttare l'interfaccia grafica che ci offre proprio il nostro IDE.
 Quindi, mantenendo aperto il progetto creato precedentemente, ci spostiamo sul menù in alto _Git_ e clicchiamo su _Create a Git Repository_, infine, nella finestra che si aprirà, ci spostiamo su _Existing remote_, come visibile nell'immagine:
 
 ![github-vsrepo](assets/posts/images/sviluppo-blog-github-vsrepo.png)
@@ -67,7 +67,7 @@ Il Remote URL del nostro repository si può trovare sulla pagina GitHub dello st
 
 ![github-remote](assets/posts/images/sviluppo-blog-github-remote.png)
 
-Bene, ora che tutto è configurato, dobbiamo solo fare il primo push del codice sul branch principale, per fare ciò possiamo sempre sfruttare la nuova schermata _Git Changes_ di Visual Studio, andando quindi a mettere in stage tutti i file del progetto, inserendo un messaggio di commit, e chiudendo il giro con il push.
+Bene, ora che tutto è configurato, dobbiamo solo fare il primo push del codice sul branch principale. Per fare ciò possiamo sempre sfruttare la nuova schermata _Git Changes_ di Visual Studio, andando quindi a mettere in stage tutti i file del progetto, inserendo un messaggio di commit, e chiudendo il giro con il push.
 > Se non trovate questa vista, che di default si trova sulla destra, in alternativa al _Solution Explorer_ , vi basta andare sul menù in alto _Views_ e quindi _Git Changes_
 
 
@@ -75,7 +75,7 @@ Bene, ora che tutto è configurato, dobbiamo solo fare il primo push del codice 
 
 ![github-vschanges](assets/posts/images/sviluppo-blog-github-vschanges.png)
 
-Ora che il branch principale (e al momento unico) è sistemato, c'è solo un'ultimo step: la creazione di un nuovo branch vuoto, su cui sarà caricato il codice compilato che verrà poi reso visibile tramite Github Pages.
+Ora che il ramo principale (e al momento unico) è sistemato, c'è solo un'ultimo step: la creazione di un nuovo branch vuoto, su cui sarà caricato il codice compilato che verrà poi reso visibile tramite Github Pages.
 Per fare questo ci bastano pochi comandi Git, che potete eseguire su un qualsiasi terminale (eventualmente anche quello presente in Visual Studio, accessibile da _View_ -> _Terminal_).
 
 * ` git checkout --orphan gh-pages `
@@ -85,7 +85,7 @@ Per fare questo ci bastano pochi comandi Git, che potete eseguire su un qualsias
 * Abbiamo un branch vuoto in locale, prima di farne il push su GitHub, abbiamo bisogno di almeno un commit, anche senza contenuto (_empty commit_); non può essere infatti fatto il push di un branch completamente vuoto, quindi eseguiamo:
   * ` git commit --allow-empty -m "root commit" `
 * Ora possiamo fare il push sul remote:
-  * ` git push origin empty-branch `
+  * ` git push origin gh-pages `
 
 Ci spostiamo ora sul nostro repo GitHub, per verificare che il branch appena pushato sia presente, e per configurarlo come base per Pages.
 Basta semplicemente andare nella scheda delle Impostazioni del nostro repository, e nella scheda _Pages_ selezionare il nostro branch appena creato, come vedete nell'immagine sotto:
