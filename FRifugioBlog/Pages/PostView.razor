@@ -59,6 +59,8 @@
 </div>
 
 @code {
+    [Inject] private IJSRuntime _js { get; set; }
+    
     [Parameter]
     public string Filename { get; set; }
 
@@ -69,5 +71,10 @@
     {
         Post = await PostService.GetPostAsync(Filename);
         HtmlContent = new MarkupString(Post.Body);
+    }
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        await _js.InvokeVoidAsync("hljs.highlightAll");
     }
 }

@@ -2,7 +2,7 @@
 @using Services
 @inject IPostService PostService
 
-<div class="card">
+<div class="card my-5">
     @if (!string.IsNullOrEmpty(Post.HeadImagePath))
     {
         <img class="card-img-top" src="@Post.HeadImagePath" alt="Post image cap">

@@ -1,35 +1,35 @@
 name: Deploy to GitHub Pages
 
-# Run workflow on every push to the master branch
+# Lancia il workflow ad ogni push su master
 on:
   push:
     branches: [ master ]
 
 jobs:
   deploy-to-github-pages:
-    # use ubuntu-latest image to run steps on
+    # Utilizza l'immagine ubuntu-latest su cui far girare gli step
     runs-on: ubuntu-latest
     steps:
-    # uses GitHub's checkout action to checkout code form the master branch
+    # GitHub checkout action per fare il git checkout dal branch master
     - uses: actions/checkout@v2
     
-    # sets up .NET Core SDK
+    # Installazione .NET Core SDK
     - name: Setup .NET Core SDK
       uses: actions/setup-dotnet@v1
 
-    # publishes Blazor project to the release-folder
+    # Publish del progetto Blazor sulla cartella release
     - name: Publish .NET Core Project
       run: dotnet publish -c Release -o release --nologo
     
-    # changes the base-tag in index.html from '/' to 'BlazorGitHubPagesDemo' to match GitHub Pages repository subdirectory
+    #  Cambio tag base in index.html da '/' a 'blog' per riconoscere la sottocartella di GitHub Pages
     - name: Change base-tag in index.html from / to my Repository Name
       run: sed -i 's/<base href="\/" \/>/<base href="\/blog\/" \/>/g' release/wwwroot/index.html
     
-    # copy index.html to 404.html to serve the same file when a file is not found
+    # File 404.html con routing di Blazor
     - name: copy index.html to 404.html
       run: cp release/wwwroot/index.html release/wwwroot/404.html
 
-    # add .nojekyll file to tell GitHub pages to not treat this as a Jekyll project. (Allow files and folders starting with an underscore)
+    # Aggiunta di un file .nojekyll per bypassare lo standard di GitHub Pages (Permette file e cartelle che iniziano per underscore)
     - name: Add .nojekyll file
       run: touch release/wwwroot/.nojekyll
       
