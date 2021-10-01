@@ -50,7 +50,7 @@
     <img src="@Post.HeadImagePath" class="img-fluid rounded mx-auto d-block col-md-12" id="head-image" alt="@(Post.Title)-image" />
 </div>
 
-<div class="container rounded" id="post-content">
+<div class="container rounded line-numbers" id="post-content">
     @HtmlContent
 
     <div class="blockquote text-right mt-5">
@@ -60,7 +60,7 @@
 
 @code {
     [Inject] private IJSRuntime _js { get; set; }
-    
+
     [Parameter]
     public string Filename { get; set; }
 
@@ -75,6 +75,7 @@
 
     protected override async Task OnAfterRenderAsync(bool firstRender)
     {
-        await _js.InvokeVoidAsync("hljs.highlightAll");
+        await _js.InvokeVoidAsync("Prism.highlightAll");
+        //await _js.InvokeVoidAsync("hljs.highlightAll");
     }
 }
