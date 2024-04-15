@@ -11,8 +11,6 @@ jobs:
   deploy-to-github-pages:
     # Utilizza l'immagine ubuntu-latest su cui far girare gli step
     runs-on: ubuntu-latest
-    env:
-      DOTNET_INSTALL_DIR: "./.dotnet"
     steps:
     # GitHub checkout action per fare il git checkout dal branch master
     - uses: actions/checkout@v4
@@ -25,7 +23,7 @@ jobs:
 
     # Publish del progetto Blazor sulla cartella release
     - name: Publish .NET Core Project
-      run: dotnet publish -c Release -o release --nologo
+      run: dotnet publish FRifugioBlog.csproj -c Release -o release --nologo
     
     #  Cambio tag base in index.html da '/' a 'blog' per riconoscere la sottocartella di GitHub Pages
     - name: Change base-tag in index.html from / to my Repository Name
