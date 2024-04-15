@@ -68,9 +68,9 @@ jobs:
     # Aggiunta di un file .nojekyll per bypassare lo standard di GitHub Pages (Permette file e cartelle che iniziano per underscore)
     - name: Add .nojekyll file
       run: touch release/wwwroot/.nojekyll
-      
-    - name: Commit wwwroot to GitHub Pages
-      uses: JamesIves/github-pages-deploy-action@4.5.0
+    
+    - name: Deploy to GitHub Pages
+      uses: JamesIves/github-pages-deploy-action@v4.5.0
       with:
         BRANCH: gh-pages
         FOLDER: release/wwwroot
