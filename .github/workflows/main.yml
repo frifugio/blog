@@ -4,6 +4,8 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches: [ master ]
+permissions:
+  contents: write
 
 jobs:
   deploy-to-github-pages:
@@ -11,11 +13,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     # GitHub checkout action per fare il git checkout dal branch master
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v4
     
     # Installazione .NET Core SDK
     - name: Setup .NET Core SDK
-      uses: actions/setup-dotnet@v1
+      uses: actions/setup-dotnet@v4
+      with:
+        dotnet-version: 8.x
 
     # Publish del progetto Blazor sulla cartella release
     - name: Publish .NET Core Project
@@ -66,7 +70,7 @@ jobs:
       run: touch release/wwwroot/.nojekyll
       
     - name: Commit wwwroot to GitHub Pages
-      uses: JamesIves/github-pages-deploy-action@3.7.1
+      uses: JamesIves/github-pages-deploy-action@4.5.0
       with:
         BRANCH: gh-pages
         FOLDER: release/wwwroot
