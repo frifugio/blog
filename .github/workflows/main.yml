@@ -23,7 +23,7 @@ jobs:
 
     # Publish del progetto Blazor sulla cartella release
     - name: Publish .NET Core Project
-      run: dotnet publish ~/FRifugioBlog/FRifugioBlog.csproj -c Release -o release --nologo
+      run: dotnet publish ./FRifugioBlog/FRifugioBlog.csproj -c Release -o release --nologo
     
     #  Cambio tag base in index.html da '/' a 'blog' per riconoscere la sottocartella di GitHub Pages
     - name: Change base-tag in index.html from / to my Repository Name
