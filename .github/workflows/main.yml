@@ -11,6 +11,8 @@ jobs:
   deploy-to-github-pages:
     # Utilizza l'immagine ubuntu-latest su cui far girare gli step
     runs-on: ubuntu-latest
+    env:
+      DOTNET_INSTALL_DIR: "./.dotnet"
     steps:
     # GitHub checkout action per fare il git checkout dal branch master
     - uses: actions/checkout@v4
@@ -72,5 +74,6 @@ jobs:
     - name: Deploy to GitHub Pages
       uses: JamesIves/github-pages-deploy-action@v4.5.0
       with:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         BRANCH: gh-pages
         FOLDER: release/wwwroot
