@@ -1,0 +1,86 @@
+{
+  "name": "Francesco Rifugio - Blog",
+  "short_name": "FRifugio - Blog",
+  "start_url": "./",
+  "display": "standalone",
+  "display_override": [
+    "window-controls-overlay"
+  ],
+  "description": "Il blog personale di Francesco Rifugio. Guide e news su tecnologia, public speaking e gaming",
+  "lang": "it",
+  "dir": "auto",
+  "theme_color": "#007acc",
+  "background_color": "#eeeef2",
+  "orientation": "any",
+  "id": "frifugio-blog",
+  "icons": [
+    {
+      "src": "assets/icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "assets/icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "assets/icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "assets/icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "assets/icons/blogScreenshot.png",
+      "sizes": "1851x970",
+      "type": "image/png",
+      "description": "Home page"
+    },
+    {
+      "src": "assets/icons/blogScreenshot.png",
+      "sizes": "1851x970",
+      "type": "image/png",
+      "form_factor": "wide",
+      "description": "Home page"
+    }
+  ],
+  "prefer_related_applications": false,
+  "shortcuts": [
+    {
+      "name": "FRifugio - About",
+      "url": "./about",
+      "description": "About page on Francesco Rifugio",
+      "icons": [
+        {
+          "src": "assets/icons/icon-512.png",
+          "sizes": "512x512",
+          "type": "image/png",
+          "purpose": "any"
+        }
+      ]
+    },
+    {
+      "name": "FRifugio - Blog",
+      "url": "./",
+      "description": "Blog",
+      "icons": [
+        {
+          "src": "assets/icons/icon-512.png",
+          "sizes": "512x512",
+          "type": "image/png",
+          "purpose": "any"
+        }
+      ]
+    }
+  ]
+}
