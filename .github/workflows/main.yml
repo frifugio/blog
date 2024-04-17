@@ -20,7 +20,11 @@ jobs:
       uses: actions/setup-dotnet@v4
       with:
         dotnet-version: 8.x
-
+        
+    # Aggiunta permessi utente alla cartella di progetto
+    - name: Give user permissions to folder
+    - run: sudo chmod -R 755 ./FRifugioBlog
+    
     # Publish del progetto Blazor sulla cartella release
     - name: Publish .NET Core Project
       run: sudo dotnet publish ./FRifugioBlog/FRifugioBlog.csproj -c Release -o release --nologo
