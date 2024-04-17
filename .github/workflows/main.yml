@@ -18,8 +18,6 @@ jobs:
     # Installazione .NET Core SDK
     - name: Setup .NET Core SDK
       uses: actions/setup-dotnet@v4
-      with:
-        dotnet-version: 8.x
         
     # Publish del progetto Blazor sulla cartella release
     - name: Publish .NET Core Project
@@ -72,6 +70,5 @@ jobs:
     - name: Deploy to GitHub Pages
       uses: JamesIves/github-pages-deploy-action@v4.5.0
       with:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         BRANCH: gh-pages
         FOLDER: release/wwwroot
