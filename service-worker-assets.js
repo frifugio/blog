@@ -33,11 +33,11 @@
       "url": "_framework\/icudt_no_CJK.dat"
     },
     {
-      "hash": "sha256-YnwJ3IaUHRhdkJ+DfwC39ih9J3hGdiYp9iTyhf8mIUs=",
+      "hash": "sha256-pfnbpOsBaWek\/Fen7P52YaN0ZY4uMPPlDCwIBkdJ9oc=",
       "url": "_framework\/blazor.boot.json"
     },
     {
-      "hash": "sha256-2IaccTo7oyva9GC916UzPtzf0XLsi2cGXeJnrevYeL8=",
+      "hash": "sha256-BXF\/EG0+j0uMdsnnIvFtwVIpc7WUaJslRLPMHoyYws4=",
       "url": "_framework\/FRifugioBlog.wasm"
     },
     {
@@ -357,7 +357,7 @@
       "url": "favicon.ico"
     },
     {
-      "hash": "sha256-Bqa6KjFuZLsfTCQNjCReUYr1PXELGhItHXLuGUjHasg=",
+      "hash": "sha256-8vVu7a9oZ9vZk5JOPmfYsd9mzJfj2sFMPFfH1X2dG2U=",
       "url": "index.html"
     },
     {
@@ -365,5 +365,5 @@
       "url": "manifest.json"
     }
   ],
-  "version": "hHFY\/PJL"
+  "version": "ZBx\/\/LUT"
 };
