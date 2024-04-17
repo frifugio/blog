@@ -23,7 +23,7 @@ jobs:
         
     # Aggiunta permessi utente alla cartella di progetto
     - name: Give user permissions to folder
-    - run: sudo chmod -R 755 ./FRifugioBlog
+      run: sudo chmod -R 755 ./FRifugioBlog
     
     # Publish del progetto Blazor sulla cartella release
     - name: Publish .NET Core Project
