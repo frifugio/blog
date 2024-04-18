@@ -1,0 +1,58 @@
+﻿@using FRifugioBlog.Models
+@using FRifugioBlog.Services
+@using System.Text
+@inject IPostService PostService
+
+<PageTitle>@(GetTitle())</PageTitle>
+<HeadContent>
+    <meta Name="keywords" Content="@GetKeywords()" />
+    <meta Property="og:title" Content="@GetTitle()" />
+    <meta Name="twitter:title" Content="@GetTitle()" />
+    <meta Name="description" Content="@GetDescription()" />
+    <meta Property="og:description" Content="@GetDescription()" />
+    <meta Name="twitter:description" Content="@GetDescription()" />
+</HeadContent>
+
+
+@code {
+    [Parameter]
+    public string Filename { get; set; }
+
+    [Parameter]
+    public string Title { get; set; }
+
+    [Parameter]
+    public string Description { get; set; }
+
+    [Parameter]
+    public string Keywords { get; set; }
+
+    public Post Post { get; set; } = new Post();
+
+    protected override async Task OnParametersSetAsync()
+    {
+        if (!string.IsNullOrEmpty(Filename))
+            Post = await PostService.GetPostMetadataAsync(Filename);
+    }
+
+    private string GetTitle()
+    {
+        StringBuilder pageTitle = new StringBuilder("Francesco Rifugio - Blog");
+        if (!string.IsNullOrWhiteSpace(Title))
+            pageTitle.Append($" | {Title}");
+        if (!string.IsNullOrWhiteSpace(Post?.Title))
+            pageTitle.Append($" | {Post?.Title}");
+
+        return pageTitle.ToString();
+    }
+
+    private string GetDescription()
+    {
+        return string.IsNullOrEmpty(Description) ? Post.Summary : Description;
+    }
+
+    private string GetKeywords()
+    {
+        return string.IsNullOrEmpty(Keywords) ? string.Join(", ", Post.Categories) : Keywords;
+    }
+}

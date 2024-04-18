@@ -1,5 +1,4 @@
 ﻿using FRifugioBlog.Models;
-using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -7,10 +6,6 @@ using System.Net.Http;
 using System.Net.Http.Json;
 using System.Text.Json;
 using YamlDotNet.Serialization;
-using YamlDotNet.Serialization.NamingConventions;
-using System.IO;
-using YamlDotNet.Core;
-using YamlDotNet.Core.Events;
 using Markdig;
 using Markdig.Syntax;
 using Markdig.Extensions.Yaml;
