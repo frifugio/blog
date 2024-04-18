@@ -33,11 +33,11 @@
       "url": "_framework\/icudt_no_CJK.dat"
     },
     {
-      "hash": "sha256-mY42cRKiaFRFj4VnlSMAxNqasUTVZq2CSsMF6vx0bJg=",
+      "hash": "sha256-StFHLWOUcbvjnJR\/16FMwTX\/wOzYilhjeF7Aa31EZoI=",
       "url": "_framework\/blazor.boot.json"
     },
     {
-      "hash": "sha256-CLVYj4fMdG3QNf8nItAoKdFSMAQgAfnHVxpcLCN2RYc=",
+      "hash": "sha256-9VJT3m\/WPwigMWeVVdZ9CIdsHr8sGJka6nGVqM\/8Nsc=",
       "url": "_framework\/FRifugioBlog.wasm"
     },
     {
@@ -49,7 +49,7 @@
       "url": "_framework\/Microsoft.AspNetCore.Components.wasm"
     },
     {
-      "hash": "sha256-zpSjC0sAtCh4fXF09jvviZUyGBpBBZts6LfR4MjIChE=",
+      "hash": "sha256-rxmzOVmW+HLkHJwIyYjFASgoYWHBW6o0VdUOWXWatbM=",
       "url": "_framework\/Microsoft.AspNetCore.Components.Web.wasm"
     },
     {
@@ -165,7 +165,7 @@
       "url": "_framework\/System.ObjectModel.wasm"
     },
     {
-      "hash": "sha256-M3DGss394rgd5u5Ixz2NauTWBNTmyJO4HdMfZHvG2X8=",
+      "hash": "sha256-71+SD6NI7xsObPP3xu0VpicgTZwiYnB1\/0TUn8azp\/g=",
       "url": "_framework\/System.Private.CoreLib.wasm"
     },
     {
@@ -181,7 +181,7 @@
       "url": "_framework\/System.Runtime.InteropServices.wasm"
     },
     {
-      "hash": "sha256-zXnbwXujEr1ZGMaD8WrqG7VPOiZcW9SHqtkPZS2DAS8=",
+      "hash": "sha256-1hpVojWDlKLAzj\/pJDbico6y8ykNlgsvdIA0mzQx6Jg=",
       "url": "_framework\/System.Runtime.wasm"
     },
     {
@@ -365,5 +365,5 @@
       "url": "manifest.json"
     }
   ],
-  "version": "4LjMosl9"
+  "version": "odC8y0bw"
 };
