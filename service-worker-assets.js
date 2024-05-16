@@ -33,11 +33,11 @@
       "url": "_framework\/icudt_no_CJK.dat"
     },
     {
-      "hash": "sha256-vTZXQmjihfuKA9kKOmAHke2Ks8pJTCMWxDBK8g8brRE=",
+      "hash": "sha256-4vHdlo57Zb32cRg0OVFSM5GjrKtBblTBmP+YcvuQDSo=",
       "url": "_framework\/blazor.boot.json"
     },
     {
-      "hash": "sha256-wObpfO20Vvcx9trTaZtlnpjCgq+lG9MxskvZGcfF8Hs=",
+      "hash": "sha256-BGY\/OxSU3wjlyyk1YkmQqAG0ANy6JUIeW9MrvupGpAs=",
       "url": "_framework\/FRifugioBlog.wasm"
     },
     {
@@ -261,7 +261,7 @@
       "url": "assets\/loadingLogo.png"
     },
     {
-      "hash": "sha256-9jh8iPYGOTzdH29rU\/yGNwuajPXQySelZIFQSfc0MH0=",
+      "hash": "sha256-eW5FepzL\/LTPjCNWM8yAshHk\/sGeVTtj\/aaLFJMMneo=",
       "url": "assets\/posts\/documents\/apim-blob-permissions.md"
     },
     {
@@ -285,12 +285,16 @@
       "url": "assets\/posts\/documents\/sviluppo-blog-blazor-part4-blazor.md"
     },
     {
-      "hash": "sha256-hnfSPCB9gM6xDMcvknJkxM0d4cmI1cdRQ9tzx16Yfec=",
+      "hash": "sha256-4++5jXMsMQXYgF9df55bYVyB2gaNTXXDZWYVedX1ysk=",
       "url": "assets\/posts\/images\/apim-blob-1.png"
     },
     {
       "hash": "sha256-daBJbVhqPpYTUOtUCQxKbmiRWSsTVSzDMvSMrC1Kxy4=",
       "url": "assets\/posts\/images\/apim-blob-2.png"
+    },
+    {
+      "hash": "sha256-srmyq5p9MtJlg5QDYizNytJu7s+dM3xiFy+amFWbQvc=",
+      "url": "assets\/posts\/images\/apim-blob-header.png"
     },
     {
       "hash": "sha256-bg4Yt0T8hD9OKvH1qu75yAPF6GIAY5KI1l6gce7kpB8=",
@@ -377,5 +381,5 @@
       "url": "manifest.json"
     }
   ],
-  "version": "+hoG1GIM"
+  "version": "yaQKN9Dm"
 };

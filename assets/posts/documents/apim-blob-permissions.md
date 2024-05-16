@@ -1,7 +1,7 @@
 ---
 title: Leggere un Blob Storage privato via API Management
 author: Francesco Rifugio
-headImagePath: assets/posts/images/sviluppo-blog-header.png
+headImagePath: assets/posts/images/apim-blob-header.png
 summary: Una breve guida in cui capire come si puó ottenere un file da uno storage account privato su Azure, unicamente via API Management.
 publishDate: 2024-05-16
 categories: [dev, azure, api-management, blob, storage, authorization]
@@ -41,12 +41,10 @@ Dopodiché, nella schermata che si aprirá, ci basta cliccare su "Add role assig
 
 ![azure-role-assignments](assets/posts/images/apim-blob-2.png)
 
-Campo | Valore 
----------|----------
- Scope | Storage 
- Subscription | < inserire la propria subscription > 
- Resource | < inserire il nome dello storage account creato come prerequisito > 
- Role | Storage Blob Data Reader 
+> - Scope: Storage  
+> - Subscription: < inserire la propria subscription >  
+> - Resource: < inserire il nome dello storage account creato come prerequisito >  
+> - Role: Storage Blob Data Reader 
 
 Bene, in questo modo abbiamo fornito al nostro API Management la possibilitá di farsi riconoscere dallo Storage Account, e poter leggere i contenuti di un container e dei relativi blob.  
 Questo peró non é sufficiente, perché adesso dobbiamo configurare la nostra API (in particolare la singola "operation" che si occuperá di leggere il nostro blob), in modo che fornisca l'autorizzazione tramite il permesso appena definito.

@@ -1,7 +1,7 @@
 {
   "mainAssemblyName": "FRifugioBlog",
   "resources": {
-    "hash": "sha256-fk+OlcYO/VpdYqh9RlANBw5UuUUabTrfUZROuNcSPkA=",
+    "hash": "sha256-8jiVZQ5dv/RXnPRpW9ULgwtNRx1+c3XShJO6tzq7h3w=",
     "jsModuleNative": {
       "dotnet.native.8.0.5.k8qrcc28q0.js": "sha256-boyHe+0RMZDkzBKGhsrnXPhPg3oZ6UqJnTUzngJPjNY="
     },
@@ -17,7 +17,7 @@
       "icudt_no_CJK.dat": "sha256-L7sV7NEYP37/Qr2FPCePo5cJqRgTXRwGHuwF5Q+0Nfs="
     },
     "assembly": {
-      "FRifugioBlog.wasm": "sha256-wObpfO20Vvcx9trTaZtlnpjCgq+lG9MxskvZGcfF8Hs=",
+      "FRifugioBlog.wasm": "sha256-BGY/OxSU3wjlyyk1YkmQqAG0ANy6JUIeW9MrvupGpAs=",
       "Markdig.wasm": "sha256-Jv9S5coLP28fMUd+sd72uOfd5e3pWx+IFMRNtR/lykc=",
       "Microsoft.AspNetCore.Components.wasm": "sha256-zQ6hccIqEgsQzOIG383tAyyKckGKjHOvHMB6Ze8rN0M=",
       "Microsoft.AspNetCore.Components.Web.wasm": "sha256-rxmzOVmW+HLkHJwIyYjFASgoYWHBW6o0VdUOWXWatbM=",
