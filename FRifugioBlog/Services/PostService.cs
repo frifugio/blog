@@ -55,7 +55,7 @@ namespace FRifugioBlog.Services
         {
             // Retrieve and convert to string the file from the specified path
             var byteArray = await _client.GetByteArrayAsync(_basePostPath + filename);
-            var fileString = Encoding.Latin1.GetString(byteArray, 0, byteArray.Length);
+            var fileString = Encoding.UTF8.GetString(byteArray, 0, byteArray.Length);
 
             var pipeline = new MarkdownPipelineBuilder()
                 .UseYamlFrontMatter()
