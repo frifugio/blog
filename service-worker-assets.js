@@ -33,11 +33,11 @@
       "url": "_framework\/icudt_no_CJK.dat"
     },
     {
-      "hash": "sha256-jjZar4YpOOydDqaI+lXMxkJGsXEWNr3LTsqAYz5XIh4=",
+      "hash": "sha256-vTZXQmjihfuKA9kKOmAHke2Ks8pJTCMWxDBK8g8brRE=",
       "url": "_framework\/blazor.boot.json"
     },
     {
-      "hash": "sha256-318\/+y+gHzc0jv+6rnIZjei8JK1bHrDUnO\/0Zovr0T8=",
+      "hash": "sha256-wObpfO20Vvcx9trTaZtlnpjCgq+lG9MxskvZGcfF8Hs=",
       "url": "_framework\/FRifugioBlog.wasm"
     },
     {
@@ -349,7 +349,7 @@
       "url": "assets\/posts\/images\/sviluppo-blog-projsetup.png"
     },
     {
-      "hash": "sha256-phHtBXazPCUi9a1aaW\/xUdkU5\/dqtpTvu4Y\/Omo9+Uo=",
+      "hash": "sha256-ewvkgsCT83295kstQ1Q\/E7lyGvl3xPARx3NxaEGli5c=",
       "url": "assets\/posts\/post-list.json"
     },
     {
@@ -377,5 +377,5 @@
       "url": "manifest.json"
     }
   ],
-  "version": "ts63LH3b"
+  "version": "+hoG1GIM"
 };
